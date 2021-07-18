@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2021 at 04:46 PM
+-- Generation Time: Jul 18, 2021 at 03:59 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -35,7 +35,7 @@ CREATE TABLE `books` (
   `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `publisher` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cover` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` double(8,2) UNSIGNED NOT NULL DEFAULT 0.00,
+  `price` double(13,2) UNSIGNED NOT NULL DEFAULT 0.00,
   `weight` double(8,2) UNSIGNED NOT NULL DEFAULT 0.00,
   `views` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `stock` int(10) UNSIGNED NOT NULL DEFAULT 0,
@@ -53,16 +53,11 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `title`, `slug`, `description`, `author`, `publisher`, `cover`, `price`, `weight`, `views`, `stock`, `status`, `created_at`, `updated_at`, `deleted_at`, `created_by`, `updated_by`, `deleted_by`) VALUES
-(1, 'Stick Playstation 5', 'Playstation', 'Stick Playstation 5', 'Playstation', 'Admin', '/pict/1.jpg', 25000.00, 2.00, 0, 10, 'PUBLISH', '2021-07-07 17:12:05', NULL, NULL, 0, NULL, NULL),
-(2, 'Stick Playstation 2', 'Playstation 2', 'Stick Playstation 2', 'Playstation', 'Admin', '/pict\\2.jpg', 20000.00, 2.00, 0, 20, 'PUBLISH', '2021-07-07 17:12:08', NULL, NULL, NULL, NULL, NULL),
-(3, 'Stick Playstation 4', 'Playstation 4', 'Stick Playstation 4', 'Playstation', 'Admin', '/pict\\3.jpg', 30000.00, 2.50, 0, 98, 'PUBLISH', '2021-07-07 17:12:10', '2021-07-11 02:06:23', NULL, NULL, NULL, NULL),
-(4, 'Stick Playstation 1', 'Playstation 1 ', 'Stick Playstation 1', 'Playstation', 'Admin', '/pict\\4.jpg', 20000.00, 2.50, 0, 98, 'PUBLISH', '2021-07-07 17:12:13', '2021-07-11 01:21:05', NULL, NULL, NULL, NULL),
-(5, 'Stick Playstation 3', 'Playstation 3', 'Stick Playstation 3', 'Playstation', 'Admin', '/pict\\5.jpg', 15000.00, 1.50, 0, 98, 'PUBLISH', '2021-07-07 17:12:15', NULL, NULL, NULL, NULL, NULL),
-(6, 'Playstation 1', 'Playstation 5', 'Playstation 1', 'Playstation', 'Admin', '/pict\\ps-1.jpg', 35000.00, 2.00, 0, 3, 'PUBLISH', '2021-07-07 17:12:16', NULL, NULL, NULL, NULL, NULL),
-(7, 'Playstation 2', 'Playstation 6', 'Playstation 2', 'Playstation', 'Admin', '/pict\\ps-2.jpg', 50000.00, 1.50, 0, 0, 'PUBLISH', '2021-07-07 17:12:17', '2021-07-11 01:11:20', NULL, NULL, NULL, NULL),
-(8, 'Playstation 3', 'Playstation 7', 'Playstation 3', 'DropUp Cimahi', 'Admin', '/pict\\ps-3.jpg', 50000.00, 1.00, 0, 1, 'PUBLISH', '2021-07-07 17:12:17', '2021-07-10 01:57:06', NULL, NULL, NULL, NULL),
-(9, 'Playstation 4', 'Playstation 8', 'Playstation 4', 'Playstation', 'Admin', '/alat\\ps-4.jpg', 50000.00, 1.50, 0, 1, 'PUBLISH', '2021-07-07 17:12:17', '2021-07-10 01:57:06', NULL, NULL, NULL, NULL),
-(10, 'Playstation 5', 'Playstation 9', 'Playstation 5', 'Playstation', 'Admin', '/alat\\ps-5.jpg', 50000.00, 1.50, 0, 1, 'PUBLISH', '2021-07-07 17:12:17', '2021-07-10 01:57:06', NULL, NULL, NULL, NULL);
+(1, 'Kursi Apartemen', 'kursi', 'Kursi apartemen Berbahan Lembut dengan banyak varian warna', 'Furniture Author', 'Admin', '/kursi/produk-3.jpg', 2500000.00, 2.00, 0, 10, 'PUBLISH', '2021-07-07 17:12:05', NULL, NULL, 0, NULL, NULL),
+(2, 'Meja', 'meja', 'Meja dengan bahan terbaik', 'Furniture Author', 'Admin', '/meja/produk-2.jpg', 4000000.00, 2.00, 0, 20, 'PUBLISH', '2021-07-07 17:12:08', NULL, NULL, NULL, NULL, NULL),
+(3, 'Lemari', 'lemari', 'lemari dengan berbahan dasar kayu dengan fungsi sliding', 'Furniture Author', 'Admin', '/lemari\\produk-1.jpg', 3000000.00, 2.50, 0, 99, 'PUBLISH', '2021-07-07 17:12:10', '2021-07-11 01:19:53', NULL, NULL, NULL, NULL),
+(4, 'Lampu', 'lampu', 'Lampu dekorasi ruangan', 'Furniture Author', 'Admin', '/lampu\\produk-1.jpg', 800000.00, 2.50, 0, 98, 'PUBLISH', '2021-07-07 17:12:13', '2021-07-11 01:21:05', NULL, NULL, NULL, NULL),
+(5, 'Jam', 'jam', 'Modern Jam', 'Furniture Author', 'Admin', '/jam\\produk-1.jpg', 150000.00, 1.50, 0, 98, 'PUBLISH', '2021-07-07 17:12:15', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -119,7 +114,7 @@ INSERT INTO `book_order` (`id`, `book_id`, `order_id`, `quantity`, `created_at`,
 (5, 7, 5, 1, '2021-07-11 01:11:20', '2021-07-11 01:11:20'),
 (6, 3, 6, 1, '2021-07-11 01:19:53', '2021-07-11 01:19:53'),
 (7, 4, 7, 1, '2021-07-11 01:21:05', '2021-07-11 01:21:05'),
-(8, 3, 8, 1, '2021-07-11 02:06:23', '2021-07-11 02:06:23');
+(8, 8, 9, 1, '2021-07-11 09:44:00', '2021-07-11 09:44:00');
 
 -- --------------------------------------------------------
 
@@ -142,16 +137,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Playstation', 'Playstation', '/pict\\1.jpg', 'PUBLISH', '2021-07-07 17:32:31', NULL),
-(2, 'Playstation', 'Playstation 2', '/pict\\2.jpg', 'PUBLISH', '2021-07-07 17:32:33', NULL),
-(3, 'Playstation', 'Playstation 3', '/pict\\3.jpg', 'PUBLISH', '2021-07-07 17:32:35', NULL),
-(4, 'Playstation', 'Playstation 4', '/pict\\4.jpg', 'PUBLISH', '2021-07-07 17:32:37', NULL),
-(5, 'Playstation', 'Playstation 5', '/pict\\5.jpg', 'PUBLISH', '2021-07-07 17:32:39', NULL),
-(6, 'Playstation', 'Playstation 6', '/pict\\ps-1.jpg', 'PUBLISH', '2021-07-07 17:32:40', NULL),
-(7, 'Playstation', 'Playstation 7', '/pict\\ps-2.jpg', 'PUBLISH', '2021-07-07 17:32:42', NULL),
-(9, 'Playstation', 'Playstation 8', '/pict\\ps-3.jpg', 'PUBLISH', '2021-07-07 17:32:42', NULL),
-(10, 'Playstation', 'Playstation 9', '/pict\\ps-4.jpg', 'PUBLISH', '2021-07-07 17:32:42', NULL),
-(11, 'Playstation', 'Playstation 10', '/pict\\ps-5.jpg', 'PUBLISH', '2021-07-07 17:32:42', NULL);
+(1, 'Kursi', 'Kursi', '/kursi\\2.jpg', 'PUBLISH', '2021-07-07 17:32:31', NULL),
+(2, 'Meja', 'Meja', '/meja\\1.jpg', 'PUBLISH', '2021-07-07 17:32:33', NULL),
+(3, 'Lemari', 'Lemari', '/lemari\\1.jpg', 'PUBLISH', '2021-07-07 17:32:35', NULL),
+(4, 'Lampu', 'Lampu', '/lampu\\1.jpg', 'PUBLISH', '2021-07-07 17:32:37', NULL),
+(5, 'Jam', 'Jam', '/jam\\1.jpg', 'PUBLISH', '2021-07-07 17:32:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -742,7 +732,7 @@ INSERT INTO `orders` (`id`, `user_id`, `total_price`, `invoice_number`, `courier
 (5, 16, '86000', '20210711081120', 'tiki-REG', 'SUBMIT', '2021-07-11 01:11:20', '2021-07-11 01:11:21'),
 (6, 16, '84000', '20210711081953', 'tiki-REG', 'SUBMIT', '2021-07-11 01:19:53', '2021-07-11 01:19:54'),
 (7, 16, '74000', '20210711082105', 'jne-REG', 'SUBMIT', '2021-07-11 01:21:05', '2021-07-11 01:21:07'),
-(8, 16, '72000', '20210711090623', 'jne-REG', 'SUBMIT', '2021-07-11 02:06:23', '2021-07-11 02:06:24');
+(9, 17, '59000', '20210711164400', 'tiki-REG', 'SUBMIT', '2021-07-11 09:44:00', '2021-07-11 09:44:01');
 
 -- --------------------------------------------------------
 
@@ -835,7 +825,13 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (8, 'Camille Nitzsche', 'sofia.watsica@example.net', NULL, '$2y$10$bP/3oNFZwz9d.w1kSYcWoudyow72NPqMBfAGcYOh/tQxrC62aiVbS', NULL, '2021-07-07 17:31:39', NULL, '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, '/xampp/htdocs/bookstore-api/public/images/users\\1b4fea1c0213c5264c9eb30b07965ed2.jpg', 'ACTIVE', ''),
 (9, 'Leland Carroll', 'ihauck@example.net', NULL, '$2y$10$FSTDAMiOsds.F13qGuc2m.HZ1bWXnNCINBR4gXmGATF8LbyES3wwy', NULL, '2021-07-07 17:31:40', NULL, '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, '/xampp/htdocs/bookstore-api/public/images/users\\b738e42969b44d1239770bd266c5b15a.jpg', 'ACTIVE', ''),
 (10, 'Prof. Angeline Blick', 'wtoy@example.net', NULL, '$2y$10$60VQ2WyOI0XZ/T.5rFpPZOFAzOzACUQ6ReFkV/CNkmf8ejL6tRxGe', NULL, '2021-07-07 17:31:42', NULL, '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, '/xampp/htdocs/bookstore-api/public/images/users\\982e7c977ecc1b48975ac8e6d7c3dacb.jpg', 'ACTIVE', ''),
-(17, 'taufik78964', 'taufik78964@gmail.com', NULL, '$2y$10$Zve8K5vmITWKvKjnhfPTnus1frQWvfiXErWv/v3MNPDWSBuxA2eI.', NULL, '2021-07-11 07:45:28', '2021-07-11 07:45:28', '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, NULL, 'ACTIVE', 'VbaGb9yZhMGKHUuAAG1afH2YI4vG905H1sEvJ5WPFQ64O7BspZL8BwLkyyai');
+(11, 'adhit290', 'adhit290@gmail.com', NULL, '$2y$10$F.iyrIhUmE2A27Jqzzha1.B9XocGX5LswB5oVFeC9pvVVUHOdgvpy', NULL, '2021-07-07 17:41:39', '2021-07-10 01:52:40', '[\"CUSTOMER\"]', 'asdasd', 30, 2, '213', '/sayur\\logo.png', 'ACTIVE', 'ISaph3pfkJBUQKLXUivPgsHc7swyTpTxSQzy8sVYTqupz9miPxt9DOmPmZK5'),
+(12, 'adhit290', 'adhithacker@gmail.com', NULL, '$2y$10$h0juQ9lrlYZxDc1qPlvh2eXQSM15ijuqjNql0AMI3QgqFZAWAMPgi', NULL, '2021-07-07 17:42:25', '2021-07-10 01:56:45', '[\"CUSTOMER\"]', 'sdfsf', 377, 10, '221', '/xampp/htdocs/bookstore-api/public/images/users\\982e7c977ecc1b48975ac8e6d7c3dacb.jpg', 'ACTIVE', 'YsX4VczMMv5m6JLM6hXXNV0404e9j5fw9JuM7RAVAE8y4JiFUv8xeqGGbhRW'),
+(13, 'Adhit Pra', 'adhit290@exam.com', NULL, '$2y$10$XoJKofKouhjt40dyiOyBieXLvsn33hB.V1F.9biJo3b/lTF0znmp.', NULL, '2021-07-07 19:29:57', '2021-07-07 19:29:57', '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, NULL, 'ACTIVE', ''),
+(14, 'Adhit', 'adhit211@gmail.com', NULL, '$2y$10$6uzjvK5nbPyEeCsjEfR.HuTl2Oz0L0ukQx6xfOZfItsV7AJWx.RZy', NULL, '2021-07-07 19:48:54', '2021-07-07 19:50:03', '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, NULL, 'ACTIVE', 'x3fP0iSsPA17vdJQJEZYDKWIO2w2hFXd2CxTfuEI0hyOjJJ7UugKRT55Lwwy'),
+(15, 'Amar San', 'a@gmail.com', NULL, '$2y$10$nUdYhbadgMy6jYP7c9ulFeCn7E7tZD4FPwVBgLciwL09Pz2oWsAl2', NULL, '2021-07-10 02:05:19', '2021-07-10 02:05:28', '[\"CUSTOMER\"]', NULL, NULL, NULL, NULL, NULL, 'ACTIVE', NULL),
+(16, 'Adhitfjkt', 'asd@gmail.com', NULL, '$2y$10$YUJXkHYfdIoqGH9uZmX9Oue1TAg9p0Tz/ZOp.IyXpYV8owpEblbyG', NULL, '2021-07-11 00:47:49', '2021-07-11 01:20:50', '[\"CUSTOMER\"]', 'asdasdsa', 331, 3, '213123', '/sayur\\logo.png', 'ACTIVE', '2aATjWSyrNRSPMqAySH21YlLWcCPkktZZKfFwZT2DEZ0L6mjKxePdMfoE1LL'),
+(17, 'Firas Meng-gokil', 'firas27@gmail.com', NULL, '$2y$10$vxLqT2IW4fwe9KA4F5g/Du1/LakpVZu20AsKev7tLtA0bCHdkKkA2', NULL, '2021-07-11 09:37:53', '2021-07-11 09:49:31', '[\"CUSTOMER\"]', 'Jl Cililin', 24, 9, '089664534432', '/sayur\\logo.png', 'ACTIVE', NULL);
 
 --
 -- Indexes for dumped tables
@@ -931,7 +927,7 @@ ALTER TABLE `book_order`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -955,7 +951,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `provinces`
