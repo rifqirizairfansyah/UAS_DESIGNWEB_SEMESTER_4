@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-container>
-      <h1> Kantor Kami <br></h1>
-Alamat: Jl.cimindi no.14 Kec. cimahi tengah Kab. Bandung<br>
-Telepon: +628131267897<br>
-Email: ummahpsthea@gmail.com<br>
-<br><h1>Buka<br></h1>
-Senin s.d. Minggu - 09.00 wib s.d. 15.00 wib<br>
+      <h1> Tentang Kami <br></h1>
+    <br>
+    Rifqi Riza Irfansyah (D111921129)<br>
+    Mochamad Ilham Lutfi (D111921138)<br>
+<br><h1>Politeknik TEDC<br></h1>
+<br>
     </v-container>
   </div>
 </template>
